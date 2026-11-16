@@ -58,6 +58,11 @@ docker compose up -d --build
 
 Текущий сервер показан в игре в меню «Опции».
 
+### Как играть по сети
+В игре выберите «Режим VS», затем «ОНЛАЙН». Первые два игрока, зашедшие на сервер, попадают в одну комнату.
+Хостом становится тот, кто зашёл первым: второй DS получает его сейв, и оба начинают с одинакового состояния.
+Если соперник вышел или от него 15 секунд нет пакетов, игра об этом сообщит.
+
 ### Wi-Fi у DS
 Nintendo DS подключается только к **открытым** сетям или сетям с **WEP**. WPA/WPA2 она не умеет.
 Нужна отдельная точка доступа: второй SSID на роутере без пароля или с WEP, либо хотспот с ноутбука/телефона.
@@ -108,6 +113,11 @@ row you need forwards on both, or a VPS with a public IP.
    or `SERVER=your.server:27620 sh tools/build.sh`.
 
 The game shows the current server in the Options menu.
+
+### Playing online
+In the game pick VS MODE, then ONLINE. The first two players to reach the server share a room. Whoever came
+first hosts, and the other DS gets the host's save so both start from the same state. If the opponent leaves or
+sends nothing for 15 seconds, the game tells you.
 
 ### DS Wi-Fi
 The DS only joins **open** or **WEP** networks — no WPA/WPA2. Use a separate SSID without a password (or WEP),
