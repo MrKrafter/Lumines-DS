@@ -1,0 +1,19 @@
+[Unit]
+Description=Lumines DS server (1v1 relay + high scores)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+DynamicUser=yes
+StateDirectory=lumines-ds
+Environment=LUMINES_DATA=/var/lib/lumines-ds/scores.json
+ExecStart=/usr/bin/python3 /opt/lumines-ds/lumines_server.py --udp 27620 --http 27621
+Restart=always
+RestartSec=3
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

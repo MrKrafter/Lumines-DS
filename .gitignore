@@ -1,0 +1,4 @@
+scores.json
+scores.json.tmp
+__pycache__/
+*.nds
