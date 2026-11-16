@@ -21,10 +21,10 @@ the game belongs to its rights holders. Build the ROM yourself from your own cop
 ```sh
 sudo mkdir -p /opt/lumines-ds
 sudo cp lumines_server.py /opt/lumines-ds/
-sudo cp deploy/lumines-ds.service /etc/systemd/system/
+sudo cp deploy/lumines-server.service /etc/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl enable --now lumines-ds
-systemctl status lumines-ds
+sudo systemctl enable --now lumines-server
+systemctl status lumines-server
 ```
 Рекорды лежат в `/var/lib/lumines-ds/scores.json`. Сервис работает от отдельного временного пользователя (DynamicUser).
 
@@ -80,9 +80,9 @@ Nintendo DS подключается только к **открытым** сет
 ```sh
 sudo mkdir -p /opt/lumines-ds
 sudo cp lumines_server.py /opt/lumines-ds/
-sudo cp deploy/lumines-ds.service /etc/systemd/system/
+sudo cp deploy/lumines-server.service /etc/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl enable --now lumines-ds
+sudo systemctl enable --now lumines-server
 ```
 Scores live in `/var/lib/lumines-ds/scores.json`; the unit runs as a throwaway user (DynamicUser).
 Open the ports: ufw `sudo ufw allow 27620/udp && sudo ufw allow 27621/tcp`, firewalld
