@@ -52,7 +52,7 @@ docker compose up -d --build
 Адрес не зашит намертво. Порядок поиска:
 1. Файл на карте памяти `/data/LuminesDS/server.txt`, одна строка `host:port`, например `your.server:27620`
    (порт — UDP-ретранслятора; рекорды берутся с порта на 1 больше).
-2. Если файла нет — адрес по умолчанию, заданный при сборке ROM:
+2. Если файла нет — адрес по умолчанию, заданный при сборке ROM (соберите ROM у себя из своей копии игры):
    - Windows: `Собрать_LuminesDS.ps1 -Server your.server:27620`
    - Linux/WSL: `SERVER=your.server:27620 sh tools/build.sh`
 
@@ -104,7 +104,7 @@ row you need forwards on both, or a VPS with a public IP.
 ### Pointing the game at your server
 1. `/data/LuminesDS/server.txt` on the memory card: one line `host:port`, e.g. `your.server:27620`
    (the UDP relay port; high scores use port + 1).
-2. Otherwise the default built into the ROM: `Собрать_LuminesDS.ps1 -Server your.server:27620` on Windows,
+2. Otherwise the default built into the ROM (build the ROM yourself from your own copy of the game): `Собрать_LuminesDS.ps1 -Server your.server:27620` on Windows,
    or `SERVER=your.server:27620 sh tools/build.sh`.
 
 The game shows the current server in the Options menu.
