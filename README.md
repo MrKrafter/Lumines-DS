@@ -63,6 +63,11 @@ docker compose up -d --build
 Хостом становится тот, кто зашёл первым: второй DS получает его сейв, и оба начинают с одинакового состояния.
 Если соперник вышел или от него 15 секунд нет пакетов, игра об этом сообщит.
 
+### Рекорды
+После каждой игры в режиме «Испытание» DS отправляет на сервер имя игрока и очки (`mode` = 1). Таблицу видно
+в «Таблице рекордов» на странице «Испытание»: кнопки L/R переключают между рекордами этой DS и сервера.
+Если сети или сервера нет, игра молча пропускает отправку, а в онлайн-таблице пишет «НЕТ СВЯЗИ».
+
 ### Wi-Fi у DS
 Nintendo DS подключается только к **открытым** сетям или сетям с **WEP**. WPA/WPA2 она не умеет.
 Нужна отдельная точка доступа: второй SSID на роутере без пароля или с WEP, либо хотспот с ноутбука/телефона.
@@ -118,6 +123,11 @@ The game shows the current server in the Options menu.
 In the game pick VS MODE, then ONLINE. The first two players to reach the server share a room. Whoever came
 first hosts, and the other DS gets the host's save so both start from the same state. If the opponent leaves or
 sends nothing for 15 seconds, the game tells you.
+
+### High scores
+After every CHALLENGE MODE game the DS sends the player's name and score to the server (`mode` = 1). The table
+is on the CHALLENGE page of SCORE RANKING: L/R switches between this DS's records and the server's. Without
+a network or a server the game skips the upload quietly and the online table says NO CONNECTION.
 
 ### DS Wi-Fi
 The DS only joins **open** or **WEP** networks — no WPA/WPA2. Use a separate SSID without a password (or WEP),
