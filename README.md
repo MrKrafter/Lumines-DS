@@ -64,9 +64,10 @@ docker compose up -d --build
 Если соперник вышел или от него 15 секунд нет пакетов, игра об этом сообщит.
 
 ### Рекорды
-После каждой игры в режиме «Испытание» DS отправляет на сервер имя игрока и очки (`mode` = 1). Таблицу видно
-в «Таблице рекордов» на странице «Испытание»: кнопки L/R переключают между рекордами этой DS и сервера.
-Если сети или сервера нет, игра молча пропускает отправку, а в онлайн-таблице пишет «НЕТ СВЯЗИ».
+В «Таблице рекордов» на странице «Испытание» под таблицей две плашки: «ЭТА DS» и «ОНЛАЙН» (кнопки L/R или
+стилус). Когда открываешь «ОНЛАЙН», DS отправляет на сервер свои рекорды «Испытания», которых там ещё нет
+(`mode` = 1), и загружает общую таблицу. Если сети или сервера нет, на плашке будет «НЕТ СВЯЗИ», а свои рекорды
+работают как раньше.
 
 ### Wi-Fi у DS
 Nintendo DS подключается только к **открытым** сетям или сетям с **WEP**. WPA/WPA2 она не умеет.
@@ -125,9 +126,9 @@ first hosts, and the other DS gets the host's save so both start from the same s
 sends nothing for 15 seconds, the game tells you.
 
 ### High scores
-After every CHALLENGE MODE game the DS sends the player's name and score to the server (`mode` = 1). The table
-is on the CHALLENGE page of SCORE RANKING: L/R switches between this DS's records and the server's. Without
-a network or a server the game skips the upload quietly and the online table says NO CONNECTION.
+On the CHALLENGE page of SCORE RANKING there are two tabs under the table, THIS DS and ONLINE (L/R or the stylus).
+Opening ONLINE uploads this DS's CHALLENGE records the server hasn't seen yet (`mode` = 1) and loads the shared
+table. Without a network or a server the tab says NO CONNECTION and the local records work as before.
 
 ### DS Wi-Fi
 The DS only joins **open** or **WEP** networks — no WPA/WPA2. Use a separate SSID without a password (or WEP),
